@@ -214,11 +214,12 @@ export default function Example() {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  rounded-md  text-base font-medium text-white hover:scale-105 hover:transition-all no-underline"
-              style={{
-                background:
-                  "linear-gradient(90deg, hsl(231deg 89% 51%) 0%, hsl(210deg 100% 61%) 100%)",
-              }}>
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  rounded-md  text-base font-medium text-white bg-[#00ff00] hover:scale-105 hover:transition-all no-underline"
+              // style={{
+              //   background:
+              //     "linear-gradient(90deg, hsl(231deg 89% 51%) 0%, hsl(210deg 100% 61%) 100%)",
+              // }}
+            >
               Get Quote
             </a>
           </div>

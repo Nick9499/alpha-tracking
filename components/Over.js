@@ -2,7 +2,7 @@ import React from "react";
 
 const Over = () => {
   return (
-    <div className=" bg-black  p-12 text-white flex justify-around flex-col md:flex-row">
+    <div className=" bg-black  p-6 md:p-12 text-white flex justify-around flex-col md:flex-row">
       <h5 className="text-xl text-center mb-5">
         OVER <br />{" "}
         <span className="text-[#00ff00] font-bold text-2xl">14,000</span>
