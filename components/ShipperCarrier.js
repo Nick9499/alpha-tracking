@@ -2,9 +2,9 @@ import React from "react";
 
 const ShipperCarrier = () => {
   return (
-    <div className="p-10 md:p-20 grid md:grid-cols-2 gap-5 md:text-center md:m-20">
+    <div className="p-10 md:m-5 lg:p-20 grid md:grid-cols-2 gap-10 md:text-center lg:m-20">
       <div>
-        <h3 className="text-lg md:text-3xl">
+        <h3 className="text-lg md:text-2xl lg:text-3xl">
           ARE YOU A <span className="text-[#00ff00] font-bold">SHIPPER?</span>
         </h3>
         <p className="pt-7 md:pt-5 text-sm md:text-base">
@@ -23,7 +23,7 @@ const ShipperCarrier = () => {
         </div>
       </div>
       <div className="mt-10 md:mt-0">
-        <h3 className="text-lg md:text-3xl">
+        <h3 className="text-lg md:text-2xl lg:text-3xl">
           ARE YOU A <span className="text-[#00ff00] font-bold">CARRIER?</span>
         </h3>
         <p className="pt-7 md:pt-5 text-sm md:text-base">

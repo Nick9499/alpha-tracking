@@ -2,11 +2,11 @@ import React from "react";
 
 const Solutions = () => {
   return (
-    <div className="p-10">
+    <div className="p-10 md:p-5 lg:p-10">
       <h4 className="text-2xl md:text-4xl font-bold text-center mb-10">
         Alpha Dispatch <span className="text-[#00ff00]">Solutions</span>
       </h4>
-      <div className="grid md:grid-cols-3 p-5 md:p-10 ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 p-5 md:p-10 ">
         <div className="md:pb-3 md:p-10 pb-10 ">
           <h5 className="font-semibold text-xl md:text-2xl">Full Truckload</h5>
           <div className="flex mb-5">

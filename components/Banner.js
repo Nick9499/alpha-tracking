@@ -21,19 +21,19 @@ const Banner = () => {
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
             }}
-            className="p-10 md:p-20 bg-cover h-full">
-            <div className="md:w-1/3 mt-5 ">
+            className="p-10  md:p-20 bg-cover h-full">
+            <div className="lg:w-1/3 mt-5 ">
               <h3 className="text-white text-lg md:text-5xl mt-5">
                 <span className="text-[#00ff00]">Elevating</span> Supply Chain
                 Experiences{" "}
               </h3>
-              <p className="text-white mt-10 text-sm">
+              <p className="text-white mt-10 text-sm md:text-base">
                 The Beon Digital Logistics Platform Provides Shippers and
                 Carriers Access to Transportation Insight & Nolan Transportation
                 Group Combined Network and Services – from Port to Porch
               </p>
             </div>
-            <div className="flex justify-between md:w-1/5 mt-10 text-xs">
+            <div className="flex justify-between md:w-1/2 lg:w-1/5 mt-10 md:text-base lg:text-xs">
               <button className="bg-white p-2 mr-5 md:mr-0 hover:bg-[#00ff00] hover:text-white rounded-md">
                 Read Press Release
               </button>
