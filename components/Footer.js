@@ -11,12 +11,12 @@ const Footer = () => {
           <Image src={logo} alt="logo" />
         </div>
         <h5 className="text-xl mt-5 mb-5">Alpha Dispatch</h5>
-        <p className="text-sm mb-2">Corporate Office</p>
-        <p className="text-sm mb-2">400 Northridge Road, Suite 1000</p>
-        <p className="text-sm mb-2">Atlanta, GA 30350</p>
+        <p className="text-sm mb-2">PO BOX 700693</p>
+        <p className="text-sm mb-2">Saint Cloud, Florida</p>
+        <p className="text-sm mb-2">Info@thealphafleet.com</p>
         <a href="tel:770-509-9611" className="text-sm mb-2">
           <span>
-            <PhoneIcon className="text-[#00ff00] w-6 h-6 inline" /> 770-509-9611
+            <PhoneIcon className="text-[#00ff00] w-6 h-6 inline" /> 888-613-9009
           </span>
         </a>
       </div>

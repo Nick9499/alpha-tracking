@@ -19,6 +19,7 @@ import { about, carrier, shipper } from "../helpers/dropdown";
 import { useRouter } from "next/router";
 import logo from "../images/logo.png";
 import Image from "next/image";
+import Script from "next/script";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -221,6 +222,7 @@ export default function Example() {
               Get Quote
             </a>
           </div>
+          <div id="google_translate_element"></div>
         </div>
       </div>
 

@@ -24,13 +24,13 @@ const Banner = () => {
             className="p-10  md:p-20 bg-cover h-full">
             <div className="lg:w-1/3 mt-5 ">
               <h3 className="text-white text-lg md:text-5xl mt-5">
-                <span className="text-[#00ff00]">Elevating</span> Supply Chain
-                Experiences{" "}
+                <span className="text-[#00ff00]">The Power</span> of a Great
+                Team{" "}
               </h3>
               <p className="text-white mt-10 text-sm md:text-base">
-                The Beon Digital Logistics Platform Provides Shippers and
-                Carriers Access to Transportation Insight & Nolan Transportation
-                Group Combined Network and Services – from Port to Porch
+                For hundreds of years canines have been mans best friend, guide,
+                and companion in life.Here at Alpha Dispatching, we are your
+                reliable companion. We'll be there every step of the way.
               </p>
             </div>
             <div className="flex justify-between md:w-1/2 lg:w-1/5 mt-10 md:text-base lg:text-xs">
