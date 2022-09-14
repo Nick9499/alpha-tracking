@@ -23,7 +23,7 @@ export const shipper = [
 
 export const carrier = [
   {
-    name: "Beon Carrier",
+    name: "Alpha Trucking Carrier",
     href: "beon",
   },
   {
