@@ -8,10 +8,15 @@ import Footer from "../components/Footer";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
+import dynamic from "next/dynamic";
+
+const DynamicHeaderWithNoSSR = dynamic(() => import("../components/Header"), {
+  ssr: "false",
+});
 const Home = () => {
   return (
     <div>
-      <Header />
+      <DynamicHeaderWithNoSSR />
       <Banner />
       <Services />
       <Over />
