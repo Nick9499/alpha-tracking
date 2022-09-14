@@ -33,11 +33,11 @@ const Banner = () => {
                 reliable companion. We'll be there every step of the way.
               </p>
             </div>
-            <div className="flex justify-between md:w-1/2 lg:w-1/5 mt-10 md:text-base lg:text-xs">
-              <button className="bg-white p-2 mr-5 md:mr-0 hover:bg-[#00ff00] hover:text-white rounded-md">
+            <div className="flex justify-between md:w-1/2 lg:w-1/4 mt-10 md:text-base lg:text-xs">
+              <button className="p-2 hover:scale-110 transition-all whitespace-nowrap inline-flex items-center justify-center text-base font-medium  bg-[#00ff00] text-white rounded-md">
                 Read Press Release
               </button>
-              <button className="bg-white p-2  hover:bg-[#00ff00] hover:text-white rounded-md">
+              <button className="p-2 hover:scale-110 transition-all   whitespace-nowrap inline-flex items-center justify-center text-base font-medium  bg-[#00ff00] text-white rounded-md">
                 Watch Video
               </button>
             </div>
