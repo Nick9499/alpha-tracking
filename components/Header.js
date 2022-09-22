@@ -128,9 +128,9 @@ export default function Example() {
             </Popover.Group>
             <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
               <a
-                href="#"
+                href="tel:8886139009"
                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  rounded-md  text-base font-medium text-white bg-[#00ff00] hover:scale-105 hover:transition-all no-underline">
-                Call Us
+                Call Now
               </a>
             </div>
             <div id="google_translate_element"></div>
@@ -169,183 +169,68 @@ export default function Example() {
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="mt-6">
-                  <Popover.Group as="nav" className=" md:flex space-x-10">
-                    <Popover className="relative">
-                      {({ open }) => (
-                        <>
-                          <Popover.Button
-                            className={classNames(
-                              "text-gray-900",
-                              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none  "
-                            )}>
-                            <span>Shipper</span>
-                            <ChevronDownIcon
-                              className={classNames(
-                                open ? "text-gray-600" : "text-gray-400",
-                                "ml-2 h-5 w-5 group-hover:text-gray-500"
-                              )}
-                              aria-hidden="true"
-                            />
-                          </Popover.Button>
-
-                          <Transition
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0 translate-y-1"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 translate-y-1">
-                            <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                  {shipper.map((item) => (
-                                    <a
-                                      key={item.name}
-                                      onClick={() => {}}
-                                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 no-underline">
-                                      <div className="ml-4">
-                                        <p className="text-base font-medium text-gray-900">
-                                          {item.name}
-                                        </p>
-                                      </div>
-                                    </a>
-                                  ))}
-                                </div>
-                              </div>
-                            </Popover.Panel>
-                          </Transition>
-                        </>
-                      )}
-                    </Popover>
-                  </Popover.Group>
-                </div>
-                <div className="mt-6">
-                  <Popover.Group as="nav" className=" md:flex space-x-10">
-                    <Popover className="relative">
-                      {({ open }) => (
-                        <>
-                          <Popover.Button
-                            className={classNames(
-                              "text-gray-900",
-                              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none "
-                            )}>
-                            <span>Carrier</span>
-                            <ChevronDownIcon
-                              className={classNames(
-                                open ? "text-gray-600" : "text-gray-400",
-                                "ml-2 h-5 w-5 group-hover:text-gray-500"
-                              )}
-                              aria-hidden="true"
-                            />
-                          </Popover.Button>
-
-                          <Transition
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0 translate-y-1"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 translate-y-1">
-                            <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                  {carrier.map((item) => (
-                                    <a
-                                      key={item.name}
-                                      onClick={() => {}}
-                                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 no-underline">
-                                      <div className="ml-4">
-                                        <p className="text-base font-medium text-gray-900">
-                                          {item.name}
-                                        </p>
-                                      </div>
-                                    </a>
-                                  ))}
-                                </div>
-                              </div>
-                            </Popover.Panel>
-                          </Transition>
-                        </>
-                      )}
-                    </Popover>
-                  </Popover.Group>
-                </div>
               </div>
               <div className=" px-5 space-y-6">
                 <div className="grid  gap-y-4 gap-x-8">
-                  <a
-                    onClick={() => {}}
+                  <Link
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
                     className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
-                    Beon™ Platform
-                  </a>
+                    Home
+                  </Link>
                 </div>
                 <div className="grid  gap-y-4 gap-x-8">
-                  <a
-                    onClick={() => {}}
+                  <Link
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
                     className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
-                    Resources
-                  </a>
+                    Services
+                  </Link>
                 </div>
-                <div className="mt-6">
-                  <Popover.Group as="nav" className=" md:flex space-x-10">
-                    <Popover className="relative">
-                      {({ open }) => (
-                        <>
-                          <Popover.Button
-                            className={classNames(
-                              "text-gray-900",
-                              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none "
-                            )}>
-                            <span>About Us</span>
-                            <ChevronDownIcon
-                              className={classNames(
-                                open ? "text-gray-600" : "text-gray-400",
-                                "ml-2 h-5 w-5 group-hover:text-gray-500"
-                              )}
-                              aria-hidden="true"
-                            />
-                          </Popover.Button>
-
-                          <Transition
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0 translate-y-1"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 translate-y-1">
-                            <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                  {about.map((item) => (
-                                    <a
-                                      key={item.name}
-                                      onClick={() => {}}
-                                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 no-underline">
-                                      <div className="ml-4">
-                                        <p className="text-base font-medium text-gray-900">
-                                          {item.name}
-                                        </p>
-                                      </div>
-                                    </a>
-                                  ))}
-                                </div>
-                              </div>
-                            </Popover.Panel>
-                          </Transition>
-                        </>
-                      )}
-                    </Popover>
-                  </Popover.Group>
+                <div className="grid  gap-y-4 gap-x-8">
+                  <Link
+                    to="solutions"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
+                    Solutions
+                  </Link>
+                </div>
+                <div className="grid  gap-y-4 gap-x-8">
+                  <Link
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    to="testimonials"
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
+                    Testimonials
+                  </Link>
+                </div>
+                <div className="grid  gap-y-4 gap-x-8">
+                  <Link
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    to="contact"
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
+                    Contact Us
+                  </Link>
                 </div>
                 <div>
                   <a
-                    href="#"
+                    href="tel:8886139009"
                     className="ml-2 mb-5 w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2  rounded-md  text-base font-medium text-white no-underline bg-[#00ff00]">
-                    Get Quote
+                    Call Now
                   </a>
                 </div>
               </div>

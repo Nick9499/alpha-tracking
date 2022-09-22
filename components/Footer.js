@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-400 bg-gray-900 body-font">
-      <div className="container mx-auto  px-10 py-10 ">
+    <footer className=" body-font">
+      <div className="container mx-auto  px-10 pt-10 pb-2 text-black">
         <div className="text-center">
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a className="text-gray-400 hover:text-[#00ff00]">
@@ -62,14 +62,7 @@ const Footer = () => {
           </span>
         </div>
         <p className="text-gray-400 text-sm text-center mt-5">
-          © 2022 Alpha Trucking —
-          <a
-            href="https://twitter.com/knyttneve"
-            className="text-gray-500 ml-1"
-            rel="noopener noreferrer"
-            target="_blank">
-            @Eric Perdomo Jr.
-          </a>
+          © 2022 Alpha Trucking and Dispatch
         </p>
       </div>
     </footer>
