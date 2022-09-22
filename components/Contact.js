@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className=" body-font relative">
+    <section className=" body-font relative" id="contact">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
           <h1 className="sm:text-3xl text-3xl font-medium title-font mb-4 ">
@@ -66,7 +66,7 @@ const Contact = () => {
             </div>
             <div className="p-2 w-full">
               <button className="flex mx-auto text-white bg-[#02F602] border-0 py-2 px-8 focus:outline-none hover:scale-110 transition-all rounded-md text-lg">
-                Button
+                Submit
               </button>
             </div>
           </div>

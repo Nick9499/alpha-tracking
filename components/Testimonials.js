@@ -20,7 +20,8 @@ const Testimonials = () => {
   return (
     <div
       style={{ width: "100%" }}
-      className="md:w-full h-full bg-[#000] md:p-10 ">
+      className="md:w-full h-full bg-[#000] md:p-10 "
+      id="testimonials">
       <Carousel interval={3000}>
         {testimonials.map((tst, i) => (
           <div key={i} className="p-10 md:m-10 text-center text-slate-50 ">

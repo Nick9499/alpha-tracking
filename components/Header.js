@@ -19,8 +19,8 @@ import { about, carrier, shipper } from "../helpers/dropdown";
 import { useRouter } from "next/router";
 import logo from "../images/logo.png";
 import Image from "next/image";
-import Script from "next/script";
 import { useEffect } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -40,7 +40,7 @@ export default function Example() {
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a onClick={() => router.push("/")}>
                 <span className="sr-only">Workflow</span>
-                <div className="w-1/12 lg:w-1/6">
+                <div className="w-1/12 lg:w-1/4">
                   <Image
                     src={logo}
                     alt="logo"
@@ -59,160 +59,78 @@ export default function Example() {
               </Popover.Button>
             </div>
             <Popover.Group as="nav" className="hidden lg:flex space-x-10">
-              <Popover className="relative">
-                {({ open }) => (
-                  <>
-                    <Popover.Button
-                      className={classNames(
-                        open ? "text-white" : "text-white",
-                        "group   inline-flex items-center text-base font-medium hover:opacity-70 focus:outline-none "
-                      )}>
-                      <span>Shipper</span>
-                      <ChevronDownIcon
-                        className={classNames(
-                          open ? "text-white" : "text-white",
-                          "ml-2 h-5 w-5 group-hover:opacity-90"
-                        )}
-                        aria-hidden="true"
-                      />
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-100"
-                      enterFrom="opacity-0 translate-y-1"
-                      enterTo="opacity-100 translate-y-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 translate-y-1">
-                      <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                            {shipper.map((item) => (
-                              <a
-                                key={item.name}
-                                onClick={() => {}}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-100 cursor-pointer no-underline"
-                                href={item.href}>
-                                <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">
-                                    {item.name}
-                                  </p>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </>
-                )}
-              </Popover>
-              <Popover className="relative">
-                {({ open }) => (
-                  <>
-                    <Popover.Button
-                      className={classNames(
-                        "text-white group rounded-md inline-flex items-center text-base font-medium hover:opacity-80 focus:outline-none "
-                      )}>
-                      <span>Carrier</span>
-                      <ChevronDownIcon
-                        className={classNames(
-                          "text-white ml-2 h-5 w-5 group-hover:opacity-80"
-                        )}
-                        aria-hidden="true"
-                      />
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-100"
-                      enterFrom="opacity-0 translate-y-1"
-                      enterTo="opacity-100 translate-y-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 translate-y-1">
-                      <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                            {carrier.map((item) => (
-                              <a
-                                key={item.name}
-                                onClick={() => {}}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-100 cursor-pointer no-underline"
-                                href={item.href}>
-                                <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">
-                                    {item.name}
-                                  </p>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </>
-                )}
-              </Popover>
-
+              {/* <a
+                href="#home"
+                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline">
+                Home
+              </a> */}
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline">
+                Home
+              </Link>
+            </Popover.Group>
+            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
+              <Link
+                to="services"
+                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                Services
+              </Link>
+            </Popover.Group>
+            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
+              <Link
+                to="solutions"
+                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                Solutions
+              </Link>
+            </Popover.Group>
+            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
+              <Link
+                to="testimonials"
+                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                Testimonials
+              </Link>
+            </Popover.Group>
+            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
+              <Link
+                to="contact"
+                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                Contact Us
+              </Link>
+            </Popover.Group>
+            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
               <a
                 onClick={() => router.push("/tracking")}
                 className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline">
                 Tracking
               </a>
-              <Popover className="relative">
-                {({ open }) => (
-                  <>
-                    <Popover.Button
-                      className={classNames(
-                        "text-white group  rounded-md inline-flex items-center text-base font-medium hover:opacity-80 focus:outline-none "
-                      )}>
-                      <span>About</span>
-                      <ChevronDownIcon
-                        className={classNames(
-                          "text-white ml-2 h-5 w-5 group-hover:opacity-80"
-                        )}
-                        aria-hidden="true"
-                      />
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-200"
-                      enterFrom="opacity-0 translate-y-1"
-                      enterTo="opacity-100 translate-y-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 translate-y-1">
-                      <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                            {about.map((item) => (
-                              <a
-                                key={item.name}
-                                onClick={() => {}}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 no-underline">
-                                <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">
-                                    {item.name}
-                                  </p>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </>
-                )}
-              </Popover>
             </Popover.Group>
             <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="#"
                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  rounded-md  text-base font-medium text-white bg-[#00ff00] hover:scale-105 hover:transition-all no-underline">
-                Get Quote
+                Call Us
               </a>
             </div>
             <div id="google_translate_element"></div>

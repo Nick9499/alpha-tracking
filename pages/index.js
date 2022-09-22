@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
+import Join from "../components/Join";
 import dynamic from "next/dynamic";
 
 const DynamicHeaderWithNoSSR = dynamic(() => import("../components/Header"), {
@@ -15,10 +16,11 @@ const DynamicHeaderWithNoSSR = dynamic(() => import("../components/Header"), {
 });
 const Home = () => {
   return (
-    <div>
+    <div className="scroll-smooth">
       <DynamicHeaderWithNoSSR />
       <Banner />
       <Services />
+      <Join />
       <Over />
       <Solutions />
       <Testimonials />
