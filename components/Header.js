@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
@@ -27,9 +27,7 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-  // useEffect(() => {
-  //   console.log(window.scrollY);
-  // }, [window.scrollY]);
+  const [show, setShow] = useState(false);
 
   const router = useRouter();
   return (
@@ -50,7 +48,9 @@ export default function Example() {
               </a>
             </div>
             <div className="-mr-2 -my-2 lg:hidden">
-              <Popover.Button className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#00ff00]">
+              <Popover.Button
+                onClick={() => setShow(true)}
+                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#00ff00]">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon
                   className="h-6 w-6 md:h-10 md:w-10"
@@ -99,17 +99,6 @@ export default function Example() {
             </Popover.Group>
             <Popover.Group as="nav" className="hidden lg:flex space-x-10">
               <Link
-                to="testimonials"
-                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}>
-                Testimonials
-              </Link>
-            </Popover.Group>
-            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
-              <Link
                 to="contact"
                 className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline"
                 spy={true}
@@ -119,6 +108,18 @@ export default function Example() {
                 Contact Us
               </Link>
             </Popover.Group>
+            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
+              <Link
+                to="testimonials"
+                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                Testimonials
+              </Link>
+            </Popover.Group>
+
             <Popover.Group as="nav" className="hidden lg:flex space-x-10">
               <a
                 onClick={() => router.push("/tracking")}
@@ -138,6 +139,7 @@ export default function Example() {
         </div>
 
         <Transition
+          show={show}
           as={Fragment}
           enter="duration-200 ease-out"
           enterFrom="opacity-0 scale-95"
@@ -160,7 +162,9 @@ export default function Example() {
                     />
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#00ff00]">
+                    <Popover.Button
+                      onClick={() => setShow(false)}
+                      className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#00ff00]">
                       <span className="sr-only">Close menu</span>
                       <XIcon
                         className="h-6 w-6 md:h-10 md:w-10"
@@ -178,7 +182,8 @@ export default function Example() {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline"
+                    onClick={() => setShow(false)}>
                     Home
                   </Link>
                 </div>
@@ -189,7 +194,8 @@ export default function Example() {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline"
+                    onClick={() => setShow(false)}>
                     Services
                   </Link>
                 </div>
@@ -200,7 +206,8 @@ export default function Example() {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline"
+                    onClick={() => setShow(false)}>
                     Solutions
                   </Link>
                 </div>
@@ -210,9 +217,10 @@ export default function Example() {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    to="testimonials"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
-                    Testimonials
+                    to="contact"
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline"
+                    onClick={() => setShow(false)}>
+                    Contact Us
                   </Link>
                 </div>
                 <div className="grid  gap-y-4 gap-x-8">
@@ -221,11 +229,13 @@ export default function Example() {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    to="contact"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline">
-                    Contact Us
+                    to="testimonials"
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 no-underline"
+                    onClick={() => setShow(false)}>
+                    Testimonials
                   </Link>
                 </div>
+
                 <div>
                   <a
                     href="tel:8886139009"

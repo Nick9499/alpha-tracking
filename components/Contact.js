@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_iwt84g8",
+        "template_z57olnh",
+        form.current,
+        "Mqvw605YEWbVos6Ix"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
-    <section className=" body-font relative" id="contact">
+    <form
+      ref={form}
+      className=" body-font relative"
+      id="contact"
+      onSubmit={sendEmail}>
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
           <h1 className="sm:text-3xl text-3xl font-medium title-font mb-4 ">
@@ -22,7 +48,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="firstname"
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-[#02F602] focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -35,7 +61,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="lastname"
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-[#02F602] focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -72,7 +98,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </form>
   );
 };
 
