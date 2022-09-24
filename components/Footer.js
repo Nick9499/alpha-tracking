@@ -9,7 +9,10 @@ const Footer = () => {
       <div className="container mx-auto  px-10 pt-10 pb-2 text-black">
         <div className="text-center">
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a className="text-gray-400 hover:text-[#00ff00]">
+            <a
+              className="text-gray-400 hover:text-[#00ff00]"
+              href="https://www.facebook.com/thealphafleet"
+              target="_blank">
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
@@ -31,7 +34,10 @@ const Footer = () => {
                 <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-gray-400 hover:text-[#00ff00]">
+            <a
+              className="ml-3 text-gray-400 hover:text-[#00ff00]"
+              href="https://www.instagram.com/thealphafleet_/"
+              target="_blank">
               <svg
                 fill="none"
                 stroke="currentColor"
