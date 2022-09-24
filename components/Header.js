@@ -120,13 +120,6 @@ export default function Example() {
               </Link>
             </Popover.Group>
 
-            <Popover.Group as="nav" className="hidden lg:flex space-x-10">
-              <a
-                onClick={() => router.push("/tracking")}
-                className="cursor-pointer text-base font-medium text-white hover:opacity-80 no-underline">
-                Tracking
-              </a>
-            </Popover.Group>
             <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="tel:8886139009"
